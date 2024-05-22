@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100;200&family=Barlow+Condensed:wght@200;300&family=Barlow:wght@300&family=Bellefair&family=Figtree:wght@300;400;500;600&family=Heebo&family=Kaushan+Script&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;1,6..12,200&family=Open+Sans:wght@300;400&family=Raleway:ital,wght@0,100;0,300;1,100;1,200;1,300&family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', sans-serif;
+}
+:root{
+    --nav-bg-:#06193a;
+    --logo-bg-:#e9ebed;
+}
+.navcontainer{
+    width: 100%;
+}
+.navcontainer nav{
+    width: 100%;
+    background-color: var(--nav-bg-);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+.navcontainer nav .logo h3{
+   color: white;
+   margin-left: 20px;
+}
+.navcontainer nav .navlinks{
+    display: flex;
+    list-style-type: none;
+    padding-right: 100px;
+}
+.navcontainer nav .navlinks li{
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+.navcontainer nav .navlinks li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    font-weight: 100;
+}
+.navcontainer nav .navlinks li:hover{
+    background: linear-gradient(to bottom, rgb(238, 197, 150), #06193a);
+}
+.navcontainer nav .navlinks li .drop-1,.drop-2,.drop-3{
+    position: absolute;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: rgb(238, 197, 150);
+    list-style-type: none;
+    color: var(--nav-bg-);
+    width: 200px;
+    transition: 0.2s ease-in-out;
+    display: none;
+    margin-left: -15px;
+    
+}
+.navlinks li .drop-1 li{
+    width: 100%;
+}
+.navlinks li .drop-1 li:hover{
+    background: linear-gradient(to bottom, rgb(238, 197, 150), #06193a);
+}
+nav .navlinks li:hover .drop-1{
+    display: block;
+}
+.navlinks li .drop-2 li{
+    width: 100%;
+}
+.navlinks li .drop-2 li:hover{
+    background: linear-gradient(to bottom, rgb(238, 197, 150), #06193a);
+}
+nav .navlinks li:hover .drop-2{
+    display: block;
+}
+nav .navlinks li:hover .drop-3{
+    display: block;
+}
+.navcontainer nav .navlinks li .drop-1 .d-drop,.d-drop1, .d-drop2,.d-drop3,.d-drop4,.d-drop5,.d-drop6{
+    position: absolute;
+    margin-left: 185px;
+    top: 0;
+    list-style-type: none;
+    background-color:rgb(238, 197, 150) ;
+    display: none;
+}
+.navlinks li .drop-1 li:hover .d-drop{
+    display: block;
+}
+.navlinks li .drop-1 .d-drop1{
+    top: 39px;
+}
+.navlinks li .drop-1 li:hover .d-drop1{
+    display: block;
+}
+.navlinks li .drop-1 .d-drop2{
+    top: 78px;
+}
+.navlinks li .drop-1 li:hover .d-drop2{
+    display: block;
+}
+.navlinks li .drop-1 .d-drop3{
+    top: 117px;
+}
+.navlinks li .drop-1 li:hover .d-drop3{
+    display: block;
+}
+.navlinks li .drop-1 .d-drop4{
+    top: 156px;
+}
+.navlinks li .drop-1 li:hover .d-drop4{
+    display: block;
+}
+.navlinks li .drop-1 .d-drop5{
+    top: 195px;
+    width: 150px;
+}
+.navlinks li .drop-1 li:hover .d-drop5{
+    display: block;
+}
+.navlinks li .drop-1 .d-drop6{
+    top: 234px;
+   
+}
+.navlinks li .drop-1 li:hover .d-drop6{
+    display: block;
+}
+#check{
+    display: none;
+}
+.menu{
+    display: none;
+}
+@media only screen and (max-width:500px) and (min-width:100px){
+    .navcontainer nav{
+        position: relative;
+    }
+    .navcontainer nav .navlinks{
+        padding-right: 0;
+        flex-direction: column;
+        position: absolute;
+        background-color: var(--nav-bg-);
+        top: 60px;
+        width: 180px;
+        display: none;
+        transition: 0.3s ease-in-out;
+    }
+    #check:checked ~ .navlinks{
+        display: block;
+        right: 0;
+    }
+    .navcontainer nav .menu{
+        display: block;
+    }
+    .navcontainer nav .menu i{
+        color: white;
+        font-size: 20px;
+        border: 1px solid grey;
+        padding: 5px;
+        margin: 0 10px;
+    }
+    .navcontainer nav .logo h3{
+       padding:  10px 0;
+     }
+    .navcontainer nav .navlinks li{
+        padding: 20px 15px;
+    }
+    .navcontainer nav .navlinks li .drop-1,.drop-2,.drop-3{
+       left: -135px;
+       top: 107px;
+       width: 150px;
+    }
+    .navlinks li .drop-2{
+        top: 167px;
+    }
+    .navlinks li .drop-3{
+        top: 226px;
+    }
+    .navlinks li .drop-1 li:hover .d-drop{
+        display: none;
+    }
+    .navlinks li .drop-1 li:hover .d-drop1{
+        display: none;
+    }
+    .navlinks li .drop-1 li:hover .d-drop2{
+        display: none;
+    }
+    .navlinks li .drop-1 li:hover .d-drop3{
+        display: none;
+    }
+    .navlinks li .drop-1 li:hover .d-drop4{
+        display: none;
+    }
+    .navlinks li .drop-1 li:hover .d-drop5{
+        display: none;
+    }
+    .navlinks li .drop-1 li:hover .d-drop6{
+        display: none;
+    }
+}
+
+/*.......................h-container.......*/
+.h-component{
+   padding-top: 39px;
+   width: 100%;
+}
+.h-component .top{
+    background-color: var(--logo-bg-);
+    width: 100%;
+    padding-bottom: 19px;
+}
+.h-component .top img{
+    margin-left: 110px;
+}
+.h-component .center{
+    display: flex;
+    width: 100%;
+}
+.h-component .center .c-left{
+    padding-left: 150px;
+    padding-bottom: 20px;
+    background-color: #f5e6b4;
+    width: 92%;
+    
+}
+.h-component .center .c-left h3{
+    font-size: 32px;
+    color: #dd0400;
+    padding: 45px 0 13px 0;
+}
+.h-component .center .c-left p{
+    color: #05379b;
+    line-height: 24px;
+    font-weight: 800;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+.h-component .center .c-right{
+    background-color: #001236;
+    width: 8%;
+}
+.h-component .bottom{
+    background-color: var(--logo-bg-);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0 20px 0;
+}
+.h-component .bottom h3{
+    color: #dd0400;
+    font-size: 20px;
+}
+
+.h-component .bottom .b-left h3{
+    padding: 15px 0;
+}
+.h-component .bottom .b-left p{
+    color: #043086;
+    padding-left: 20px;
+}
+.h-component .bottom .b-left p a{
+    color: #dd0400;
+}
+.h-component .bottom .b-right{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.bottom .b-right .addres h4{
+    color:#022c80;
+    padding: 10px 0;
+    font-weight: 800;
+}
+.bottom .b-right .addres ul{
+    list-style-type: none;
+}
+.bottom .b-right .addres ul li{
+    padding: 5px 0;
+    color: #05379b;
+}
+.bottom .b-right .phone h4{
+    color: #05379b;
+    padding: 10px 0;
+}
+.bottom .b-right .enuiry a{
+    color: #05379b;
+}
+/*..........................fotter,...*/
+footer{
+    background-color: var(--nav-bg-);
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+footer .f-top{
+    background: linear-gradient(to bottom, #092350 ,#000816);
+    border-bottom: 1px solid rgb(98, 243, 243);
+    height: 4vh;
+}
+footer .f-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding: 60px 170px;
+}
+footer .f-center div{
+    width: 280px;
+    border-radius: 10px;
+    background: linear-gradient(to, rgba(6,25,58,255),rgba(6,25,58,255) );
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+footer .f-center div img{
+   margin-left: -80px;
+}
+footer .f-center div p{
+    font-size: 14px;
+    line-height: 20px;
+}
+footer .f-center div a{
+    color: #f6dd97;
+   margin-top: 10px;
+   text-align: end;
+   display: flex;
+   justify-content: end;
+   align-items: end;
+    
+}
+footer .f-bottom{
+    text-align: center;
+    padding-bottom: 10px;
+}
+footer .f-bottom p{
+    color: #f6dd97;
+    font-size: 15px;
+}
+footer .f-bottom p a{
+    color: white;
+}
+@media only screen and (max-width:500px) and (min-width:100px){
+    .h-component{
+        padding-top: 0px;
+        width: 100%;
+     }
+    .h-component .top img{
+        margin-left: 30px;
+        width: 160px;
+        margin-top: 20px;
+    }
+    .h-component .center .c-left{
+        padding-left: 20px;
+    }
+    .h-component .center .c-left h3{
+        font-size: 18px;
+        padding: 25px 0 13px 0;
+    }
+    .h-component .center .c-left p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .h-component .bottom {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .h-component .bottom .b-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .h-component .bottom .b-left img{
+        width: 300px;
+    }
+    .h-component .bottom .b-right{
+        padding-left: 50px;
+    }
+    footer .f-center{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .f-center div img{
+        margin-left: -50px;
+     }
+}
